@@ -18,7 +18,7 @@ DNA_strand ("GTAT") # return "CATA"
 """
 
 def DNA_strand(dna):
-    converted_dna = ['A' if d =='T' else 'T' if d == 'A' else 'G' if d == 'C' else 'C' for d in dna]
-    return "".join(converted_dna)
+    dna_pairs = {'A': 'T', 'T': 'A', 'C': 'G', 'G':'C'}
+    return "".join([dna_pairs[d] for d in dna])
 
 print(DNA_strand("ACCG"))
